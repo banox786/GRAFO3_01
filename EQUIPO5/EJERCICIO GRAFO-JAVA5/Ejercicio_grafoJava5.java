@@ -1,11 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-/**
- *
- * @author rilde
- */
 public class Ejercicio_grafoJava5 {
 
     /**
@@ -13,6 +5,11 @@ public class Ejercicio_grafoJava5 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        System.err.println("Holaaa");
+        System.err.println("SI COMPILA");
+        System.err.println("Pruebas de codigo");
+
         System.err.println("Hola Mundo");
+        System.err.println("ilderio1");
     }
 }
