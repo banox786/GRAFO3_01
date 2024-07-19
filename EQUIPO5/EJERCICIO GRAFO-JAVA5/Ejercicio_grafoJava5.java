@@ -8,6 +8,7 @@ public class Ejercicio_grafoJava5 {
         System.err.println("Holaaa");
         System.err.println("SI COMPILA");
         System.err.println("Pruebas de codigo");
+
+        System.err.println("Hola Mundo");
     }
-    
 }
