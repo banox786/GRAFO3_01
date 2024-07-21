@@ -21,7 +21,18 @@ public class Grafo{
     public void setInicio(Vertice inicio){
         this.inicio = inicio;
     }
-
+    public void insertarVertice(char capacidad, char tipo, char ubicacion) {
+        Vertice nuevo = new Vertice(capacidad, tipo, ubicacion);
+        if (this.inicio == null) {
+            this.inicio = nuevo;
+        } else {
+            Vertice actual = this.inicio;
+            while (actual.getSigVertice() != null) {
+                actual = actual.getSigVertice();
+            }
+            actual.setSigVertice(nuevo);
+        }
+    }
     private Object mostrarlistaAdyacencia() {
         Vertice actual = this.getInicio();
         while(actual != null){
@@ -34,30 +45,38 @@ public class Grafo{
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
         int opc;
-        int capacidad;
-        Vertice origen, destino;
+        char capacidad, tipo, ubicacion, origen, destino, presion;
+        int flujo, distancia;
         Scanner leer = new Scanner(System.in);
         Grafo grafo = new Grafo();
 
-        do{
-            System.out.print("1. Insertar vertice");
-            System.out.print("2. Insertar arista");
-            System.out.print("3. Mostrar");
-            System.out.print("4. Salir");
-            opc=leer.nextInt();
-            switch(opc){
-                case 1 -> {
-                    System.out.print("Ingresa los datos del vertice");
-                    
-                }
-                case 2 ->{
+        do {
+            System.out.println("1. Insertar vertice");
+            System.out.println("2. Insertar arista");
+            System.out.println("3. Mostrar");
+            System.out.println("4. Salir");
+            opc = leer.nextInt();
+            switch (opc) {
+                case 1:
+                    System.out.print("Ingresa la capacidad del vertice: ");
+                    capacidad = leer.next().charAt(0);
+                    System.out.print("Ingresa el tipo del vertice: ");
+                    tipo = leer.next().charAt(0);
+                    System.out.print("Ingresa la ubicacion del vertice: ");
+                    ubicacion = leer.next().charAt(0);
+                    grafo.insertarVertice(capacidad, tipo, ubicacion);
+                    break;
+                case 2:
                     System.out.print("Ingresa el valor de origen");
 
-                }
-                case 3 -> grafo.mostrarlistaAdyacencia();
-                case 4 -> System.out.print("Adios, basura");
+                    break;
+                case 3:
+                    grafo.mostrarlistaAdyacencia();
+                    break;
+                case 4:
+                    System.out.print("Adios, basura");
+                    break;
             }
         }while(opc!=4);
     }
