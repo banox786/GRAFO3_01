@@ -16,8 +16,16 @@ public class Grafo{
         this.inicio = inicio;
     }
 
-    private void insertarVertice(int capacidad, String tipo, String ubicacion){
+    private void insertarVertice(String capacidad, String tipo, String ubicacion){
        Vertice nuevo = new Vertice(capacidad, tipo, ubicacion);
+    }
+
+    private Object mostrarlistaAdyacencia() {
+        Vertice actual = this.getInicio();
+        while(actual != null){
+            System.out.print(actual.getCapacidad() + ":");
+        }
+        return actual;
     }
 
     /**
@@ -40,10 +48,15 @@ public class Grafo{
             switch(opc){
                 case 1 -> {
                     System.out.print("Ingresa los datos del vertice");
-                
+                    
                 }
+                case 2 ->{
+                    System.out.print("Ingresa el valor de origen");
+
+                }
+                case 3 -> grafo.mostrarlistaAdyacencia();
+                case 4 -> System.out.print("Adios, basura");
             }
         }while(opc!=4);
-        
     }
 }
