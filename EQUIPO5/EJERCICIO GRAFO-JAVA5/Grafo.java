@@ -40,7 +40,7 @@ public class Grafo{
             switch(opc){
                 case 1 -> {
                     System.out.print("Ingresa los datos del vertice");
-                    capacidad = leer.next().intAt(0);
+                
                 }
             }
         }while(opc!=4);
