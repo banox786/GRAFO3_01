@@ -1,11 +1,11 @@
 public class Vertice {
-    private int capacidad;
+    private String capacidad;
     private String tipo;
     private String ubicacion;
     private Vertice sigVertice;
     private Arista inicioArista;
 
-    public Vertice(int capacidad, String tipo, String ubicacion){
+    public Vertice(String capacidad, String tipo, String ubicacion){
         this.capacidad = capacidad;
         this.tipo = tipo;
         this.ubicacion = ubicacion;
@@ -13,11 +13,11 @@ public class Vertice {
         this.inicioArista = null;
     }
 
-    public int getCapacidad() {
+    public String getCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(int capacidad) {
+    public void setCapacidad(String capacidad) {
         this.capacidad = capacidad;
     }
 
