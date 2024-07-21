@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-=======
 import java.util.Scanner;
->>>>>>> ab325d34e87dc47453b2f057a2c04f80975d49fa
+
 
 public class Grafo{
 
@@ -17,10 +15,6 @@ public class Grafo{
 
     public void setInicio(Vertice inicio){
         this.inicio = inicio;
-    }
-
-    private void insertarVertice(String capacidad, String tipo, String ubicacion){
-       Vertice nuevo = new Vertice(capacidad, tipo, ubicacion);
     }
 
     private Object mostrarlistaAdyacencia() {
