@@ -9,13 +9,13 @@ package grafo;
  * @author PC
  */
 public class Vertice {
-    private String capacidad;
-    private String tipo;
-    private String ubicacion;
+    private char capacidad;
+    private char tipo;
+    private char ubicacion;
     private Vertice sigVertice;
     private Arista inicioArista;
 
-    public Vertice(String capacidad, String tipo, String ubicacion) {
+    public Vertice(char capacidad, char tipo, char ubicacion) {
         this.capacidad = capacidad;
         this.tipo = tipo;
         this.ubicacion = ubicacion;
@@ -23,27 +23,27 @@ public class Vertice {
         this.inicioArista = null;
     }
 
-    public String getCapacidad() {
+    public char getCapacidad() {
         return capacidad;
     }
 
-    public void setCapacidad(String capacidad) {
+    public void setCapacidad(char capacidad) {
         this.capacidad = capacidad;
     }
 
-    public String getTipo() {
+    public char getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(char tipo) {
         this.tipo = tipo;
     }
 
-    public String getUbicacion() {
+    public char getUbicacion() {
         return ubicacion;
     }
 
-    public void setUbicacion(String ubicacion) {
+    public void setUbicacion(char ubicacion) {
         this.ubicacion = ubicacion;
     }
 
