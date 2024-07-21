@@ -1,19 +1,40 @@
 public class Vertice {
-    private int dato;
+    private int capacidad;
+    private String tipo;
+    private String ubicacion;
     private Vertice sigVertice;
     private Arista inicioArista;
 
-    public Vertice(int dato){
-        this.dato = dato;
+    public Vertice(int capacidad, String tipo, String ubicacion){
+        this.capacidad = capacidad;
+        this.tipo = tipo;
+        this.ubicacion = ubicacion;
         this.sigVertice = null;
         this.inicioArista = null;
     }
 
-    public int getDato(){
-        return dato;
+    public int getCapacidad() {
+        return capacidad;
     }
-    public void setDato(int dato){
-        this.dato = dato;
+
+    public void setCapacidad(int capacidad) {
+        this.capacidad = capacidad;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
 
     public Vertice getSigVertice(){
