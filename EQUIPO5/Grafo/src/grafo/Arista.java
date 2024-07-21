@@ -13,9 +13,9 @@ public class Arista {
     private Arista sigArista;
     private int flujo;
     private int distancia;
-    private String presion;
+    private char presion;
 
-    public Arista(Vertice verticeDestino, int flujo, int distancia, String presion) {
+    public Arista(Vertice verticeDestino, int flujo, int distancia, char presion) {
         this.verticeDestino = verticeDestino;
         this.sigArista = null;
         this.flujo = flujo;
@@ -55,11 +55,11 @@ public class Arista {
         this.distancia = distancia;
     }
 
-    public String getPresion() {
+    public char getPresion() {
         return presion;
     }
 
-    public void setPresion(String presion) {
+    public void setPresion(char presion) {
         this.presion = presion;
     }
 }
