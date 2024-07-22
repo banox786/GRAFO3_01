@@ -50,7 +50,7 @@ public class Grafo{
      */
     public static void main(String[] args) {
         int opc;
-        char capacidad, tipo, ubicacion, origen, destino, presion;
+        char capacidad, tipo, ubicacion, presion;
         int flujo, distancia;
         Scanner leer = new Scanner(System.in);
         Grafo grafo = new Grafo();
@@ -61,9 +61,8 @@ public class Grafo{
             System.out.println("3. Mostrar");
             System.out.println("4. Salir");
             opc = leer.nextInt();
-            switch (opc) {
-                //Insertar vertice
-                case 1:
+            switch (opc){
+                case 1 -> {
                     //Le pide al usuario que ingresa la capacidad.
                     System.out.print("Ingresa la capacidad del vertice: ");
                     capacidad = leer.next().charAt(0);
@@ -72,8 +71,8 @@ public class Grafo{
                     System.out.print("Ingresa la ubicacion del vertice: ");
                     ubicacion = leer.next().charAt(0);
                     grafo.insertarVertice(capacidad, tipo, ubicacion);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     //Ingresar la informacion de la Arista.
                     System.out.print("Ingresa la cantidad de flujo: ");
                     flujo = leer.next().charAt(0);
@@ -81,17 +80,13 @@ public class Grafo{
                     distancia = leer.next().charAt(0);
                     System.out.print("Ingresa la presión: ");
                     presion = leer.next().charAt(0);
-                    break;
-                case 3:
-                    grafo.mostrarlistaAdyacencia();
-                    break;
-                case 4:
-                    System.out.print("Adios, basura(:");
-                    break;
-                //Si selecciona un número diferente a los que se muestras le mostra el siguiente mensaje.
-                default:
-                    System.out.print("Opcion no valida.):\n\n");
+                }
+                case 3 -> grafo.mostrarlistaAdyacencia();
+                case 4 -> System.out.print("ADIOS(:");
+                default -> System.out.print("Opcion no valida.):\n\n");
             }
-        }while(opc!=4);
+            //Insertar vertice
+            //Si selecciona un número diferente a los que se muestras le mostra el siguiente mensaje.
+                    }while(opc!=4);
     }
 }
