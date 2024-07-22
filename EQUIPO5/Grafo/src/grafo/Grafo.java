@@ -36,21 +36,54 @@ public class Grafo{
             actual.setSigVertice(nuevo);
         }
     }
-    //Método de mostrar
-    private Object mostrarlistaAdyacencia() {
-        Vertice actual = this.getInicio();
-        while(actual != null){
-            System.out.print(actual.getCapacidad() + ":");
+    public void insertarArista(char origen, char destino, int flujo, int distancia, char presion) {
+        Vertice verticeOrigen = buscarVertice(origen);
+        Vertice verticeDestino = buscarVertice(destino);
+        if (verticeOrigen != null && verticeDestino != null) {
+            Arista nuevaArista = new Arista(verticeDestino, flujo, distancia, presion);
+            if (verticeOrigen.getInicioArista() == null) {
+                verticeOrigen.setInicioArista(nuevaArista);
+            } else {
+                Arista actual = verticeOrigen.getInicioArista();
+                while (actual.getSigArista() != null) {
+                    actual = actual.getSigArista();
+                }
+                actual.setSigArista(nuevaArista);
+            }
+        } else {
+            System.out.println("Uno o ambos vértices no existen.");
         }
-        return actual;
     }
-
+    private Vertice buscarVertice(char capacidad) {
+        Vertice actual = this.inicio;
+        while (actual != null) {
+            if (actual.getCapacidad() == capacidad) {
+                return actual;
+            }
+            actual = actual.getSigVertice();
+        }
+        return null;
+    }
+    //Método de mostrar
+public void mostrarListaAdyacencia() {
+        Vertice actual = this.getInicio();
+        while (actual != null) {
+            System.out.print(actual.getCapacidad() + ": ");
+            Arista arista = actual.getInicioArista();
+            while (arista != null) {
+                System.out.print(arista.getVerticeDestino().getCapacidad() + " ");
+                arista = arista.getSigArista();
+            }
+            System.out.println();
+            actual = actual.getSigVertice();
+        }
+    }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         int opc;
-        char capacidad, tipo, ubicacion, presion;
+        char capacidad, tipo, ubicacion,origen,destino, presion;
         int flujo, distancia;
         Scanner leer = new Scanner(System.in);
         Grafo grafo = new Grafo();
@@ -74,14 +107,20 @@ public class Grafo{
                 }
                 case 2 -> {
                     //Ingresar la informacion de la Arista.
-                    System.out.print("Ingresa la cantidad de flujo: ");
-                    flujo = leer.next().charAt(0);
+                   System.out.print("Ingresa el vertice origen: ");
+                    origen = leer.next().charAt(0);
+                    System.out.print("Ingresa el vertice destino: ");
+                    destino = leer.next().charAt(0);
+                    System.out.print("Ingresa el flujo: ");
+                    flujo = leer.nextInt();
                     System.out.print("Ingresa la distancia: ");
-                    distancia = leer.next().charAt(0);
-                    System.out.print("Ingresa la presión: ");
+                    distancia = leer.nextInt();
+                    System.out.print("Ingresa la presion: ");
                     presion = leer.next().charAt(0);
+                    grafo.insertarArista(origen, destino, flujo, distancia, presion);
+                    break;
                 }
-                case 3 -> grafo.mostrarlistaAdyacencia();
+                case 3 -> grafo.mostrarListaAdyacencia();
                 case 4 -> System.out.print("ADIOS(:");
                 default -> System.out.print("Opcion no valida.):\n\n");
             }
