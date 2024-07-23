@@ -9,7 +9,7 @@ package redelectrica;
  * @author Diana Ximena
  */
 public class RedElectrica {
-
+private Generador inicio;
     /**
      * @param args the command line arguments
      */
