@@ -11,6 +11,9 @@ package redelectrica;
 public class Generador {
     private int id;
     private int capacidad;
+    private String tipo;
+    private String ubicacion;
+    private Generador sigGenerador;
 
     public int getId() {
         return id;
@@ -26,6 +29,22 @@ public class Generador {
 
     public void setCapacidad(int capacidad) {
         this.capacidad = capacidad;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
     }
     
     
