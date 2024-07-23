@@ -84,6 +84,7 @@ public class RedElectrica {
     }
  
  
+    
  
     public static void main(String[] args) {
         int a;
