@@ -46,6 +46,14 @@ public class Generador {
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
     }
+
+    public Generador getSigGenerador() {
+        return sigGenerador;
+    }
+
+    public void setSigGenerador(Generador sigGenerador) {
+        this.sigGenerador = sigGenerador;
+    }
     
     
 }
