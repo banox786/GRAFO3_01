@@ -8,13 +8,16 @@ package grafo;
  *
  * @author PC
  */
+//Se crea la clase Vertice
 public class Vertice {
+    //Se declaran las variables.
     private char capacidad;
     private char tipo;
     private char ubicacion;
     private Vertice sigVertice;
     private Arista inicioArista;
-
+    
+    //Constructor del Vertice.
     public Vertice(char capacidad, char tipo, char ubicacion) {
         this.capacidad = capacidad;
         this.tipo = tipo;
@@ -22,7 +25,8 @@ public class Vertice {
         this.sigVertice = null;
         this.inicioArista = null;
     }
-
+    
+    //Getters y Setters de las variables anteriormente declaradas
     public char getCapacidad() {
         return capacidad;
     }
