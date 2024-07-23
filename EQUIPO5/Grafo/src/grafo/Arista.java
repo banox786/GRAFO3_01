@@ -8,7 +8,9 @@ package grafo;
  *
  * @author PC
  */
+//Se crea la clase 
 public class Arista {
+    //Se declaran las variables
     private Vertice verticeDestino;
     private Arista sigArista;
     private int flujo;
