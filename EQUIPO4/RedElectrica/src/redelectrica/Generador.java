@@ -13,6 +13,7 @@ public class Generador {
     private int capacidad;
     private String tipo;
     private String ubicacion;
+    private Generador sigGenerador;
 
     public int getId() {
         return id;
@@ -44,6 +45,14 @@ public class Generador {
 
     public void setUbicacion(String ubicacion) {
         this.ubicacion = ubicacion;
+    }
+
+    public Generador getSigGenerador() {
+        return sigGenerador;
+    }
+
+    public void setSigGenerador(Generador sigGenerador) {
+        this.sigGenerador = sigGenerador;
     }
     
     
