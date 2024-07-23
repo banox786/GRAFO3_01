@@ -16,6 +16,7 @@ public class Generador {
     private Generador sigGenerador;
     private Cable inicioCable;
 
+    
     public int getId() {
         return id;
     }
