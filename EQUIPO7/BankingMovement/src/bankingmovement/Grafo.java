@@ -40,5 +40,18 @@ public grafo(List<Vertice> vertices, List<Arista> Aristas){
    }
 }
 
-   public void mostrarListaAdyacencia
+   public void mostrarListaAdyacencia(){
+      Vertice actuak = this.getInicio();
+      while(actual != null){
+         System.out.print(actual.getDato() + ":");
+         Arista actualAri = actual.getInicioArista();
+         while(actualAri != null){
+            System.out.print(actualAri.getVerticeDestino().getDato() + " ->");
+            actualAri = actualAri.getSiguienteArista();
+         }
+         System.out.println("null");
+         actual = actual.getSigVertice();
+      }
+   }
+
          
