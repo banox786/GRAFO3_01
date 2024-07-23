@@ -12,6 +12,12 @@ public class Cable {
     private Generador generadorDestino;
     private Cable sigCable;
 
+    public Cable(Generador generadorDestino) {
+        this.generadorDestino = generadorDestino;
+        this.sigCable = null;
+    }
+    
+
     public Generador getGeneradorDestino() {
         return generadorDestino;
     }
