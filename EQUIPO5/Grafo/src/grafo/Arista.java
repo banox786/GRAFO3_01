@@ -10,13 +10,14 @@ package grafo;
  */
 //Se crea la clase 
 public class Arista {
-    //Se declaran las variables
+    //Se declaran las variables.
     private Vertice verticeDestino;
     private Arista sigArista;
     private int flujo;
     private int distancia;
     private char presion;
-
+    
+    //Contructor.
     public Arista(Vertice verticeDestino, int flujo, int distancia, char presion) {
         this.verticeDestino = verticeDestino;
         this.sigArista = null;
@@ -24,7 +25,8 @@ public class Arista {
         this.distancia = distancia;
         this.presion = presion;
     }
-
+    
+    //Se crean Getter y Setters.
     public Vertice getVerticeDestino() {
         return verticeDestino;
     }
