@@ -9,5 +9,14 @@ package redelectrica;
  * @author xxKim
  */
 public class Cable {
+    private Generador generadorDestino;
+
+    public Generador getGeneradorDestino() {
+        return generadorDestino;
+    }
+
+    public void setGeneradorDestino(Generador generadorDestino) {
+        this.generadorDestino = generadorDestino;
+    }
     
 }
