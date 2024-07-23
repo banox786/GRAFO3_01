@@ -14,6 +14,7 @@ public class Generador {
     private String tipo;
     private String ubicacion;
     private Generador sigGenerador;
+    private Cable inicioCable;
 
     public int getId() {
         return id;
@@ -53,6 +54,14 @@ public class Generador {
 
     public void setSigGenerador(Generador sigGenerador) {
         this.sigGenerador = sigGenerador;
+    }
+
+    public Cable getInicioCable() {
+        return inicioCable;
+    }
+
+    public void setInicioCable(Cable inicioCable) {
+        this.inicioCable = inicioCable;
     }
     
     
