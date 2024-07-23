@@ -10,6 +10,7 @@ package redelectrica;
  */
 public class Cable {
     private Generador generadorDestino;
+    private Cable sigCable;
 
     public Generador getGeneradorDestino() {
         return generadorDestino;
@@ -17,6 +18,14 @@ public class Cable {
 
     public void setGeneradorDestino(Generador generadorDestino) {
         this.generadorDestino = generadorDestino;
+    }
+
+    public Cable getSigCable() {
+        return sigCable;
+    }
+
+    public void setSigCable(Cable sigCable) {
+        this.sigCable = sigCable;
     }
     
 }
