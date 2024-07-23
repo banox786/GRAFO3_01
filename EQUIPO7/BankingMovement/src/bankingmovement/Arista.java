@@ -1,7 +1,7 @@
 public class Arista {
     private float monto;
-    private string fecha;
-    private string tipoTransaccion;
+    private String fecha;
+    private String tipoTransaccion;
     private Vertice cuentaOrigen;
     private Vertice cuentaDestino;
 
@@ -27,12 +27,22 @@ public String getFecha (){
 public void setFecha (String fecha){
         this.fecha = fecha;
 }
-public String getTipoTransaccion(){
+public String getTipoTransaccion (){
     return tipoTransaccion;
 }
 public void setTipoTransaccion (String tipoTransaccion) {
     this.tipoTransaccion = tipoTransaccion;
 }
 public Vertice getCuentaOrigen () {
-    
-    
+    return cuentaOrigen;
+}
+public void setCuentaOrigen (Vertice cuentaOrigen){
+    this.cuentaOrigen = cuentaOrigen;
+}
+public Vertice getCuentaDestino (){
+    return cuentaDestino;
+}
+public void setCuentaDestino (Vertice cuentaDestino){
+    this.cuentaDestino = cuentaDestino;
+}
+}
