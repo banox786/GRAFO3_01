@@ -23,5 +23,6 @@ public class Arista {
 
     public void setSigArista(Arista sigArista) {
         this.sigArista = sigArista;
-    }   
+    }
+    
 }
