@@ -21,7 +21,4 @@ public class Arista {
         return sigArista;
     }
 
-    public void setSigArista(Arista sigArista) {
-        this.sigArista = sigArista;
-    }   
-}
+
