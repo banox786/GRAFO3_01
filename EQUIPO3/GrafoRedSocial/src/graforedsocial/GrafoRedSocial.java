@@ -61,6 +61,14 @@ public class GrafoRedSocial {
                     grafo.insertarArista(origen, destino);
                     break;
                     
+                case 3:
+                    grafo.mostrarListaAdyacencia();
+                    break;
+
+                case 4:
+                    System.out.println("Saliendo del programa");
+                    break;
+                    
                 default:
                     System.out.println("Opcion no valida, elige otra");
                     break;
