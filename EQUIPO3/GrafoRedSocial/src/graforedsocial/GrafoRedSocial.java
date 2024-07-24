@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package graforedsocial;
-
+import java.util.Scanner;
 /**
  *
  * @author HOME
