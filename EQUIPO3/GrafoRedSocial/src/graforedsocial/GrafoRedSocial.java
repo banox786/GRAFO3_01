@@ -17,8 +17,8 @@ public class GrafoRedSocial {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int opc;
-        char dato;
+        int opc, seguidores;
+        String nombre, ciudad;
         Vertice origen, destino;
     }
     
