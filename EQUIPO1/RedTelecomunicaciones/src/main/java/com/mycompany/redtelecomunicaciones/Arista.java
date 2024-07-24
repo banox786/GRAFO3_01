@@ -1,37 +1,29 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.redtelecomunicaciones;
 
-/**
- *
- * @author Thaily Mairyn
- */
 public class Arista {
-    private Vertice verticeDestino;
-    private int ponderacion;
+    private Dispositivo dispositivoDestino;
+    private float ponderacion;
     private Arista sigArista;
 
-    public Arista(Vertice destino) {
-        this.verticeDestino = verticeDestino;
+    public Arista(Dispositivo dispositivoDestino, float ponderacion) {
+        this.dispositivoDestino = dispositivoDestino;
+        this.ponderacion = ponderacion;
         this.sigArista = null;
-         this.ponderacion =  ponderacion;
     }
 
-    public Vertice getVerticeDestino() {
-        return verticeDestino;
+    public Dispositivo getDispositivoDestino() {
+        return dispositivoDestino;
     }
 
-    public void setVerticeDestino(Vertice verticeDestino) {
-        this.verticeDestino = verticeDestino;
+    public void setDispositivoDestino(Dispositivo dispositivoDestino) {
+        this.dispositivoDestino = dispositivoDestino;
     }
-    
-    public int getPonderacion() {
+
+    public float getPonderacion() {
         return ponderacion;
     }
 
-    public void setPonderacion(int ponderacion) {
+    public void setPonderacion(float ponderacion) {
         this.ponderacion = ponderacion;
     }
 
@@ -42,4 +34,6 @@ public class Arista {
     public void setSigArista(Arista sigArista) {
         this.sigArista = sigArista;
     }
+
+    
 }

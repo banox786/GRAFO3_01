@@ -3,21 +3,21 @@ package com.mycompany.redtelecomunicaciones;
  *
  * @author julio y victor
  */
-public class Vertice {
+public class Dispositivo {
     private String dirIP;
     private String nombre;
     private String tipo;
     private float capacidad;
-    private Vertice sigDispositivo;
+    private Dispositivo sigDispositivo;
     private Arista primeraArista;
 
-    public Vertice(String dirIP, String nombre, String tipo, float capacidad, Vertice sigDispositivo, Arista primeraArista) {
+    public Dispositivo(String dirIP, String nombre, String tipo, float capacidad) {
         this.dirIP = dirIP;
         this.nombre = nombre;
         this.tipo = tipo;
         this.capacidad = capacidad;
-        this.sigDispositivo = sigDispositivo;
-        this.primeraArista = primeraArista;
+        this.sigDispositivo = null;
+        this.primeraArista = null;
     }
 
     public String getDirIP() {
@@ -52,11 +52,11 @@ public class Vertice {
         this.capacidad = capacidad;
     }
 
-    public Vertice getSigDispositivo() {
+    public Dispositivo getSigDispositivo() {
         return sigDispositivo;
     }
 
-    public void setSigDispositivo(Vertice sigDispositivo) {
+    public void setSigDispositivo(Dispositivo sigDispositivo) {
         this.sigDispositivo = sigDispositivo;
     }
 
@@ -66,6 +66,11 @@ public class Vertice {
 
     public void setPrimeraArista(Arista primeraArista) {
         this.primeraArista = primeraArista;
+    }
+
+    @Override
+    public String toString() {
+        return "Vertice{" + "dirIP=" + dirIP + ", nombre=" + nombre + ", tipo=" + tipo + ", capacidad=" + capacidad + ", sigDispositivo=" + sigDispositivo + ", primeraArista=" + primeraArista + '}';
     }
 
     
