@@ -12,6 +12,10 @@ public class Vertice {
    public Vertice(String id, String numeroCuenta, String tipoCuenta, float Saldo) {
       this.id = id;
       this.numeroCuenta = numeroCuenta;
-this.tipoCuenta = tipoCuenta
+      this.tipoCuenta = tipoCuenta;
+      this.saldo = saldo;
+      this.sigVertice = null;
+      this.inicioArista = null
+          }
 
 }
