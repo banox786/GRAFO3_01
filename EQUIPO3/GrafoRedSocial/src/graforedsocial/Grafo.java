@@ -1,14 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package graforedsocial;
 
-/**
- *
- * @author HOME
- */
 public class Grafo {
     private Vertice inicio;
 
@@ -34,4 +25,21 @@ public class Grafo {
             }
             actual.setSigVertice(nuevo);
     }
+    public void mostrarListaAdyacencia() {
+        Vertice actual = this.getInicio();
+            while (actual != null) {
+                System.out.print("Ciudad: " + actual.getCiudad() + ", ");
+                System.out.print("Nombre: " + actual.getNombre() + ", ");
+                System.out.println("Seguidores: " + actual.getSeguidores());
+                Arista actualArista = actual.getInicioArista();
+                while (actualArista != null) {
+                    System.out.print("  -> Ciudad: " + actualArista.getVerticeDestino().getCiudad() + ", ");
+                    System.out.print("Nombre: " + actualArista.getVerticeDestino().getNombre() + ", ");
+                    System.out.println("Seguidores: " + actualArista.getVerticeDestino().getSeguidores());
+                    actualArista = actualArista.getSigArista();
+                    }
+                actual = actual.getSigVertice();
+                System.out.println("");
+                }
+            }
 }
