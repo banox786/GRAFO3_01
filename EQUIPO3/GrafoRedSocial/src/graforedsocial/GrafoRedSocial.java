@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package graforedsocial;
+import java.util.Scanner;
 
 /**
  *
@@ -16,6 +17,9 @@ public class GrafoRedSocial {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        int opc, seguidores;
+        String nombre, ciudad;
+        Vertice origen, destino;
     }
     
 }
