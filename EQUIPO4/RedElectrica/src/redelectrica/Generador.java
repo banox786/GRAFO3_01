@@ -16,6 +16,14 @@ public class Generador {
     private Generador sigGenerador;
     private Cable inicioCable;
 
+    public Generador(int id, int capacidad, String tipo, String ubicacion) {
+        this.id = id;
+        this.capacidad = capacidad;
+        this.tipo = tipo;
+        this.ubicacion = ubicacion;
+        this.sigGenerador = null;
+        this.inicioCable = null;
+    }
     
     public int getId() {
         return id;
