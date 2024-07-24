@@ -1,4 +1,4 @@
-public class RedTelecomAlan {
+public class RedTelecom {
     private Dispositivo primerDispositivo;
 
     public RedTelecomAlan() {
