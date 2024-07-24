@@ -27,17 +27,16 @@ public class Grafo {
             actual.setSigVertice(nuevo);
         }
     }
-    public void insertarArista(Vertice origen, Vertice destino){
-        if(origen == null || destino == null){
-            System.out.println("No se puede insertar la arista");
-        }else{
-            Arista nuevaArista=new Arista(destino);
-            if(origen.getInicioArista()==null){
-                origen.setInicioArista(nuevaArista);
+    public void insertarVertice(String nombre, String ciudad, int seguidores){
+            Vertice nuevo = new Vertice(nombre, ciudad, seguidores);
+            if(this.getInicio()==null){
+                this.setInicio(nuevo);
             }else{
-                Arista actual=origen.getInicioArista();
-                while (actual.getSigArista()==null){
-                    actual.setSigArista(nuevaArista);
+                Vertice actual = this.getInicio();
+                while(actual.getSigVertice()!=null){
+                    actual = actual.getSigVertice();
                 }
-    }
+                actual.setSigVertice(nuevo);
+            }
+        }
 }
