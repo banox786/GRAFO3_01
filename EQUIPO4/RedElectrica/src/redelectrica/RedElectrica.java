@@ -113,7 +113,19 @@ public class RedElectrica {
     //comentario jflajslfj
  
     public static void main(String[] args) {
-        int a;
+       Scanner leer = new Scanner(System.in);
+        
+        int opc; //Opcion para el menu
+        
+        int id; //ID del Generador
+        int capacidad; //Capacidad del Generador
+        String tipo; //Tipo del Generador
+        String ubicacion; //Ubicacion del Generador
+        
+        Generador origen, destino; //Origen y Destino de Cable
+        
+        //Creacion del Red Electrica
+        RedElectrica redsita = new RedElectrica();
     }
     
 }
