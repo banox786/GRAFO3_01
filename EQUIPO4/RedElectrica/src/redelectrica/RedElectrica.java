@@ -87,7 +87,28 @@ public class RedElectrica {
         }
     }
  
- 
+    //Insertar Cable
+    public void insertarCable(Generador origen, Generador destino){
+        //Verifica que los generadores de origen y destino no sean nulos
+        if(origen == null || destino == null){
+            System.out.println("No se puede insertar cable.");
+        } else {
+            //Crea un nuevo cable que apunta al generador destino
+            Cable nuevaCable = new Cable(destino);
+            //Si el generador origen no tiene cables, añade el nuevo cable como el primera
+            if(origen.getInicioCable() == null){
+                origen.setInicioCable(nuevaCable);
+            } else {
+                //Si el generador origen ya tiene cables, recorre hasta el último cable
+                Cable actual = origen.getInicioCable();
+                while(actual.getSigCable() != null){
+                    actual = actual.getSigCable();
+                }
+                //Añade el nueva cable al final de el lista de cables del generador origen
+                actual.setSigCable(nuevaCable);
+            }
+        }
+    }
     
     //comentario jflajslfj
  
