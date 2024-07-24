@@ -1,28 +1,22 @@
 package bankingmovement;
 
-import java.util.List;
 
 public class Grafo {
-   private List<Vertice> vertices;
-   private List<Arista> aristas;
+    private Vertice Inicio;
 
-public Grafo(List<Vertice> vertices, List<Arista> Aristas){
-   this.vertices = vertices;
-   this. aristas = aristas;
-   }
-   public List<Vertice> getVertices(){
-      return vertices;
-   }
-   public void setVertices(List<Vertice> vertices){
-      this.vertices = vertices;
-   }
-   public List<Arista> getArista(){
-      return aristas;
-   }
-   public void setAristas(List<Arista> aristas){
-      this.aristas = aristas;
-   }
+    public Grafo(Vertice Inicio) {
+        this.Inicio = Inicio;
+    }
 
+    public Vertice getInicio() {
+        return Inicio;
+    }
+
+    public void setInicio(Vertice Inicio) {
+        this.Inicio = Inicio;
+    }
+    
+    
    public void insertarArista(float monto, String fecha, String tipoTransaccion, Vertice cuentaDestino, Vertice cuentaOrigen, Arista sigArista){
        if(cuentaOrigen==null || cuentaDestino==null){
            System.out.println("No se puede insertar la arista");
@@ -38,9 +32,21 @@ public Grafo(List<Vertice> vertices, List<Arista> Aristas){
                }
                actual.setSigArista(nuevaArista);
                }
-       }
-       
-       
-      
+       }    
 }
+   
+   
+   
+   public void insertarVertice(String id, String numeroCuenta, String tipoCuenta, float saldo, Vertice sigVertice, Arista inicioArista){
+       Vertice nuevo=new Vertice(id, numeroCuenta, tipoCuenta, saldo);
+       if(this.getInicio()==null){
+           this.setInicio(nuevo);
+       }else{
+           Vertice actual=this.getInicio();
+           while(actual.getSigVertice()!=null){
+               actual=actual.getSigVertice();
+           }
+           actual.setSigVertice(nuevo);
+       }
+   }
 }         
