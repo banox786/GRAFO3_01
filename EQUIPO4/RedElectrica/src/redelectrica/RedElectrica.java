@@ -160,6 +160,21 @@ public class RedElectrica {
                     System.out.println("Destino}:" + destino.getId());
                     redsita.insertarCable(origen, destino);
                 break;
-    }
-    
+                //3. Mostrar
+                case 3:
+                    redsita.mostrarListaAdyacencia();
+                break;
+                
+                //4. Salir
+                case 4:
+                    System.out.println("Hasta pronto.\n");
+                break;
+                
+                default:
+                    System.out.println("Opcion no valida.");
+            }
+        }while(opc != 4);
+    }
 }
+                
+  
