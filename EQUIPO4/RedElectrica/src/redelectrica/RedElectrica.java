@@ -22,11 +22,7 @@ public class RedElectrica {
     public void setInicio(Generador inicio) {
         this.inicio = inicio;
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 12e8547c5b52360d05c67cfb47d3407316b1bbd7
     public void insertarGenerador(int id, int capacidad, String tipo, String ubicacion){
         //Crear nuevo Generador
         Generador nuevo = new Generador(id, capacidad, tipo, ubicacion);
