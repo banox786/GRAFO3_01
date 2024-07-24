@@ -8,14 +8,14 @@ package grafotransporte;
  *
  * @author navy_
  */
-public class Vertices {
+public class Vertice {
     private String nombreEstacion;
     private String horario;
-    private Aristas inicioArista;
-    private Vertices sigVertices;
+    private Arista inicioArista;
+    private Vertice sigVertices;
 
     //Constructor
-    public Vertices(String nombreEstacion, String horario, Aristas inicioArista) {
+    public Vertice(String nombreEstacion, String horario, Arista inicioArista) {
         this.nombreEstacion = nombreEstacion;
         this.horario = horario;
         this.inicioArista = inicioArista;
@@ -40,19 +40,19 @@ public class Vertices {
         this.horario = horario;
     }
 
-    public Aristas getInicioArista() {
+    public Arista getInicioArista() {
         return inicioArista;
     }
 
-    public void setInicioArista(Aristas inicioArista) {
+    public void setInicioArista(Arista inicioArista) {
         this.inicioArista = inicioArista;
     }
     
-    public Vertices getSigVertices(){
+    public Vertice getSigVertices(){
          return sigVertices;
     }
     
-    public void setSigVertices(Vertices sigVertices){
+    public void setSigVertices(Vertice sigVertices){
         this.sigVertices = sigVertices;
     }
 }

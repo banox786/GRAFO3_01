@@ -11,18 +11,18 @@ package grafotransporte;
 import java.util.Scanner;
 public class GrafoTransporte {
 
-    private Vertices primerVertice;
+    private Vertice primerVertice;
 
     public GrafoTransporte() {
         this.primerVertice = null;
     }
 
     public void agregarVertice(String nombreEstacion, String horario) {
-        Vertices nuevoVertice = new Vertices(nombreEstacion, horario, null);
+        Vertice nuevoVertice = new Vertice(nombreEstacion, horario, null);
         if (primerVertice == null) {
             primerVertice = nuevoVertice;
         } else {
-            Vertices temp = primerVertice;
+            Vertice temp = primerVertice;
             while (temp.getSigVertices() != null) {
                 temp = temp.getSigVertices();
             }
@@ -31,14 +31,14 @@ public class GrafoTransporte {
     }
 
     public void agregarArista(String origen, String destino, int distancia, int tiempo) {
-        Vertices verticeOrigen = buscarVertice(origen);
-        Vertices verticeDestino = buscarVertice(destino);
+        Vertice verticeOrigen = buscarVertice(origen);
+        Vertice verticeDestino = buscarVertice(destino);
         if (verticeOrigen != null && verticeDestino != null) {
-            Aristas nuevaArista = new Aristas(verticeDestino, distancia, tiempo);
+            Arista nuevaArista = new Arista(verticeDestino, distancia, tiempo);
             if (verticeOrigen.getInicioArista() == null) {
                 verticeOrigen.setInicioArista(nuevaArista);
             } else {
-                Aristas temp = verticeOrigen.getInicioArista();
+                Arista temp = (Arista) verticeOrigen.getInicioArista();
                 while (temp.getSigAristas() != null) {
                     temp = temp.getSigAristas();
                 }
@@ -47,8 +47,8 @@ public class GrafoTransporte {
         }
     }
 
-    private Vertices buscarVertice(String nombreEstacion) {
-        Vertices temp = primerVertice;
+    private Vertice buscarVertice(String nombreEstacion) {
+        Vertice temp = primerVertice;
         while (temp != null) {
             if (temp.getNombreEstacion().equals(nombreEstacion)) {
                 return temp;
@@ -59,10 +59,10 @@ public class GrafoTransporte {
     }
 
     public void mostrarGrafo() {
-        Vertices temp = primerVertice;
+        Vertice temp = primerVertice;
         while (temp != null) {
             System.out.println("Estacion: " + temp.getNombreEstacion() + ", Horario: " + temp.getHorario());
-            Aristas aristaTemp = temp.getInicioArista();
+            Arista aristaTemp = temp.getInicioArista();
             while (aristaTemp != null) {
                 System.out.println("     Destino: " + aristaTemp.getVerticeDestino().getNombreEstacion() + ", Distancia: " + aristaTemp.getDistancia() + ", Tiempo: " + aristaTemp.getTiempo());
                 aristaTemp = aristaTemp.getSigAristas();
@@ -107,7 +107,7 @@ public class GrafoTransporte {
                 case "3":
                     System.out.print("Nombre de la estacion a buscar: ");
                     String nombreBusqueda = scanner.nextLine();
-                    Vertices vertice = grafo.buscarVertice(nombreBusqueda);
+                    Vertice vertice = grafo.buscarVertice(nombreBusqueda);
                     if (vertice != null) {
                         System.out.println("Estacion encontrada: " + vertice.getNombreEstacion() + ", Horario: " + vertice.getHorario());
                     } else {
