@@ -9,7 +9,7 @@ public class Vertice {
     private Vertice sigVertice;
     private Arista inicioArista;
 
-    public Vertice(String id, String numeroCuenta, String tipoCuenta, float saldo, Vertice sigVertice, Arista inicioArista) {
+    public Vertice(String id, String numeroCuenta, String tipoCuenta, float saldo) {
         this.id = id;
         this.numeroCuenta = numeroCuenta;
         this.tipoCuenta = tipoCuenta;
