@@ -65,15 +65,4 @@ public class Vertice {
     public void setInicioArista(Arista inicioArista) {
         this.inicioArista = inicioArista;
     }
-    
-    
-
-   
-
-
-    
-    
-    
-    
-   
 }
