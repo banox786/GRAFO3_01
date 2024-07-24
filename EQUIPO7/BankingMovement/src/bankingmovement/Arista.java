@@ -8,9 +8,9 @@ public class Arista {
     private Vertice cuentaDestino;
     private Arista sigArista;
 
-    public Arista (float monto, String fecha, String tipoTransaccion, Vertice cuentaDestino, Vertice cuentaOrgien) {
-        this.monto = monto; 
-        this.fecha=fecha;
+    public Arista(float monto, String fecha, String tipoTransaccion, Vertice cuentaOrigen, Vertice cuentaDestino) {
+        this.monto = monto;
+        this.fecha = fecha;
         this.tipoTransaccion = tipoTransaccion;
         this.cuentaOrigen = cuentaOrigen;
         this.cuentaDestino = cuentaDestino;
@@ -57,4 +57,6 @@ public void setCuentaDestino (Vertice cuentaDestino){
     public void setSigArista(Arista sigArista) {
         this.sigArista = sigArista;
     }
+
+
 }
