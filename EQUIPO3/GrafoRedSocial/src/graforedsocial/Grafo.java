@@ -27,4 +27,8 @@ public class Grafo {
             actual.setSigVertice(nuevo);
         }
     }
+    public void insertarArista(Vertice origen, Vertice destino){
+        if(origen == null || destino == null){
+            System.out.println("No se puede insertar la arista");
+    }
 }
