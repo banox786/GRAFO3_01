@@ -3,13 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package redelectrica;
-
+import java.util.Scanner;
 /**
  *
  * @author Diana Ximena
  */
 public class RedElectrica {
- private Generador inicio;
+    private Generador inicio;
+    
+    public RedElectrica() {
+        this.inicio = null;
+    }
  
  
  
