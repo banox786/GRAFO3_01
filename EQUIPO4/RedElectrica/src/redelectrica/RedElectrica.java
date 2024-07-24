@@ -28,26 +28,6 @@ public class RedElectrica {
         this.inicio = inicio;
     }
     
-    
-    
-    //Buscar Generador
-    public Generador buscarGenerador(int id){
-        //Declara Generador actual
-        Generador actual = this.getInicio();
-        
-        //Comienza a buscar
-        while(actual != null){
-            //Si lo encuentra
-            if(actual.getId() == id){
-                return actual;
-            }else{
-                actual = actual.getSigGenerador();
-            }
-        }
-        return null;
-    }
-    
-
  
  
  
