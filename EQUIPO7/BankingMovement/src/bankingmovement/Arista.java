@@ -57,6 +57,4 @@ public void setCuentaDestino (Vertice cuentaDestino){
     public void setSigArista(Arista sigArista) {
         this.sigArista = sigArista;
     }
-
-
 }
