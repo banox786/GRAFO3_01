@@ -22,7 +22,11 @@ public class RedElectrica {
     public void setInicio(Generador inicio) {
         this.inicio = inicio;
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 12e8547c5b52360d05c67cfb47d3407316b1bbd7
     public void insertarGenerador(int id, int capacidad, String tipo, String ubicacion){
         //Crear nuevo Generador
         Generador nuevo = new Generador(id, capacidad, tipo, ubicacion);
@@ -41,6 +45,23 @@ public class RedElectrica {
             }
             actual.setSigGenerador(nuevo);
         }
+    }
+    
+    //Buscar Generador
+    public Generador buscarGenerador(int id){
+        //Declara Generador actual
+        Generador actual = this.getInicio();
+        
+        //Comienza a buscar
+        while(actual != null){
+            //Si lo encuentra
+            if(actual.getId() == id){
+                return actual;
+            }else{
+                actual = actual.getSigGenerador();
+            }
+        }
+        return null;
     }
     
     //Mostrar lista de Adyacencia
@@ -162,6 +183,6 @@ public class RedElectrica {
                 default:
                     System.out.println("Opcion no valida.");
             }
-        }while(opc != 4);
+        }while(opc != 4);
     }
 }
