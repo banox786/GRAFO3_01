@@ -22,12 +22,27 @@ public class GrafoRedSocial {
         int opc, seguidores;
         String nombre, ciudad;
         Vertice origen, destino;
-        System.out.println("Menu\n");
-        System.out.println("1) Insertar Vertice");
-        System.out.println("2) Insertar Arista");
-        System.out.println("3) Mostrar");
-        System.out.println("4) Salir");
-        opc = leer.nextInt();
+        do {
+            System.out.println("Menu\n");
+            System.out.println("1) Insertar Vertice");
+            System.out.println("2) Insertar Arista");
+            System.out.println("3) Mostrar");
+            System.out.println("4) Salir");
+            opc = leer.nextInt();
+            switch (opc) {
+                case 1:
+                    System.out.println("Ingresa el nombre del nuevo vertice");
+                    String nombre = leer.nextLine();
+                    System.out.println("Ingresa la ciudad del nuevo vertice");
+                    String ciudad = leer.nextLine();
+                    System.out.println("Ingresa la cantidad de seguidores del nuevo vertice");
+                    int seguidores = leer.nextInt();
+                    grafo.insertarVertice(nombre, ciudad, seguidores);
+                    break;
+                default:
+                    System.out.println("Opcion no valida, elige otra");
+                    break;
+            }
+        } while (opc != 4);
     }
-    
 }
