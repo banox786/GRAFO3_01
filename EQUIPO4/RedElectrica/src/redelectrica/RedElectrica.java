@@ -3,13 +3,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package redelectrica;
-
+import java.util.Scanner;
 /**
  *
  * @author Diana Ximena
  */
 public class RedElectrica {
- private Generador inicio;
+    private Generador inicio;
+    
+    public RedElectrica() {
+        this.inicio = null;
+    }
  
  
  
@@ -83,11 +87,79 @@ public class RedElectrica {
         }
     }
  
- 
-    
+    //Insertar Cable
+    public void insertarCable(Generador origen, Generador destino){
+        //Verifica que los generadores de origen y destino no sean nulos
+        if(origen == null || destino == null){
+            System.out.println("No se puede insertar cable.");
+        } else {
+            //Crea un nuevo cable que apunta al generador destino
+            Cable nuevaCable = new Cable(destino);
+            //Si el generador origen no tiene cables, añade el nuevo cable como el primera
+            if(origen.getInicioCable() == null){
+                origen.setInicioCable(nuevaCable);
+            } else {
+                //Si el generador origen ya tiene cables, recorre hasta el último cable
+                Cable actual = origen.getInicioCable();
+                while(actual.getSigCable() != null){
+                    actual = actual.getSigCable();
+                }
+                //Añade el nueva cable al final de el lista de cables del generador origen
+                actual.setSigCable(nuevaCable);
+            }
+        }
+    }
  
     public static void main(String[] args) {
-        int a;
+       Scanner leer = new Scanner(System.in);
+        
+        int opc; //Opcion para el menu
+        
+        int id; //ID del Generador
+        int capacidad; //Capacidad del Generador
+        String tipo; //Tipo del Generador
+        String ubicacion; //Ubicacion del Generador
+        
+        Generador origen, destino; //Origen y Destino de Cable
+        
+        //Creacion de la Red Electrica
+        RedElectrica redsita = new RedElectrica();
+        
+        do{
+            //Opciones
+            System.out.println("\n Menu: \n 1. Insertar Generador \n 2. Insestar Cable \n 3. Mostrar \n 4. Salir");
+            //Leer la opcion
+            opc = leer.nextInt();
+            leer.nextLine();
+            
+            switch(opc){
+                //1. Insertar Generador
+                case 1:
+                    System.out.print("Inserta el ID: ");
+                    id = leer.nextInt();
+                    System.out.print("Inserta la capacidad: ");
+                    capacidad = leer.nextInt();
+                    System.out.print("Inserta el tipo: ");
+                    tipo = leer.next();
+                    System.out.print("Inserta la ubicacion: ");
+                    ubicacion = leer.next();
+                    redsita.insertarGenerador(id, capacidad, tipo, ubicacion);
+                break;
+                
+                //2. Insertar Cable
+                case 2:
+                    System.out.print("Inserta el ID del generador de origen: ");
+                    id = leer.nextInt();
+                    origen = redsita.buscarGenerador(id);
+                    
+                    System.out.print("Inserta el ID del generador de destino: ");
+                    id = leer.nextInt();
+                    destino = redsita.buscarGenerador(id);
+                    
+                    System.out.println("Origen}:" + origen.getId());
+                    System.out.println("Destino}:" + destino.getId());
+                    redsita.insertarCable(origen, destino);
+                break;
     }
     
 }
