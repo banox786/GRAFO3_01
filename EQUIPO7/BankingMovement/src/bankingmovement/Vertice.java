@@ -31,6 +31,33 @@ public String getNumeroCuenta() {
     public void setNumeroCuenta(String numeroCuenta) {
         this.numeroCuenta = numeroCuenta;
     }
+public void setTipoCuenta(String tipoCuenta) {
+        this.tipoCuenta = tipoCuenta;
+    }
+
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
+    }
+
+    public Vertice getSigVertice() {
+        return sigVertice;
+    }
+ public void setSigVertice(Vertice sigVertice) {
+        this.sigVertice = sigVertice;
+    }
+
+    public Arista getInicioArista() {
+        return inicioArista;
+    }
+
+    public void setInicioArista(Arista inicioArista) {
+        this.inicioArista = inicioArista;
+    }   
+
 
 
 }
