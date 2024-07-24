@@ -1,3 +1,5 @@
+package bankingmovement;
+
 public class Arista {
     private float monto;
     private String fecha;
@@ -5,7 +7,7 @@ public class Arista {
     private Vertice cuentaOrigen;
     private Vertice cuentaDestino;
 
-    public Arista (float monto, string fecha, string tipoTransaccion, Verice cuentaOrigen, Vertice cuentaDestino) {
+    public Arista (float monto, String fecha, String tipoTransaccion, Vertice cuentaOrigen, Vertice cuentaDestino) {
         this.monto = monto; 
         this.fecha=fecha;
         this.tipoTransaccion = tipoTransaccion;
