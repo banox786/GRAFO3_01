@@ -145,6 +145,21 @@ public class RedElectrica {
                     ubicacion = leer.next();
                     redsita.insertarGenerador(id, capacidad, tipo, ubicacion);
                 break;
+                
+                //2. Insertar Cable
+                case 2:
+                    System.out.print("Inserta el ID del generador de origen: ");
+                    id = leer.nextInt();
+                    origen = redsita.buscarGenerador(id);
+                    
+                    System.out.print("Inserta el ID del generador de destino: ");
+                    id = leer.nextInt();
+                    destino = redsita.buscarGenerador(id);
+                    
+                    System.out.println("Origen}:" + origen.getId());
+                    System.out.println("Destino}:" + destino.getId());
+                    redsita.insertarCable(origen, destino);
+                break;
     }
     
 }
