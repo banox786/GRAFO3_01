@@ -9,21 +9,21 @@ package grafotransporte;
  * @author navy_
  */
 public class Aristas {
-    private Vertice verticeDestino;
+    private Vertices verticeDestino;
     private int distancia;
     private int tiempo;
 
-    public Aristas(Vertice verticeDestino, int distancia, int tiempo) {
+    public Aristas(Vertices verticeDestino, int distancia, int tiempo) {
         this.verticeDestino = verticeDestino;
         this.distancia = distancia;
         this.tiempo = tiempo;
     }
 
-    public Vertice getVerticeDestino() {
+    public Vertices getVerticeDestino() {
         return verticeDestino;
     }
 
-    public void setVerticeDestino(Vertice verticeDestino) {
+    public void setVerticeDestino(Vertices verticeDestino) {
         this.verticeDestino = verticeDestino;
     }
 
