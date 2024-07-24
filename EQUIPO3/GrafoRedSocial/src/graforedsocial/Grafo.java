@@ -30,5 +30,14 @@ public class Grafo {
     public void insertarArista(Vertice origen, Vertice destino){
         if(origen == null || destino == null){
             System.out.println("No se puede insertar la arista");
+        }else{
+            Arista nuevaArista=new Arista(destino);
+            if(origen.getInicioArista()==null){
+                origen.setInicioArista(nuevaArista);
+            }else{
+                Arista actual=origen.getInicioArista();
+                while (actual.getSigArista()==null){
+                    actual.setSigArista(nuevaArista);
+                }
     }
 }
