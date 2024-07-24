@@ -11,21 +11,15 @@ package grafotransporte;
 public class Vertices {
     private String nombreEstacion;
     private String horario;
-    private Vertices destino;
     private Aristas inicioArista;
     private Vertices sigVertices;
 
     //Constructor
-    public Vertices(String nombreEstacion, String horario, Vertices destino, Aristas inicioArista) {
+    public Vertices(String nombreEstacion, String horario, Aristas inicioArista) {
         this.nombreEstacion = nombreEstacion;
         this.horario = horario;
-        this.destino = destino;
         this.inicioArista = inicioArista;
         this.sigVertices = null;
-    }
-
-    Vertices(Vertices destino) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     //Setters y getters
@@ -44,14 +38,6 @@ public class Vertices {
 
     public void setHorario(String horario) {
         this.horario = horario;
-    }
-
-    public Vertices getDestino() {
-        return destino;
-    }
-
-    public void setDestino(Vertices destino) {
-        this.destino = destino;
     }
 
     public Aristas getInicioArista() {

@@ -17,7 +17,7 @@ public class GrafoTransporte {
     }
 
     public void agregarVertice(String nombreEstacion, String horario) {
-        Vertices nuevoVertice = new Vertices(nombreEstacion, horario, null, null);
+        Vertices nuevoVertice = new Vertices(nombreEstacion, horario, null);
         if (primerVertice == null) {
             primerVertice = nuevoVertice;
         } else {
