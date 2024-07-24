@@ -39,6 +39,28 @@ public class GrafoRedSocial {
                     int seguidores = leer.nextInt();
                     grafo.insertarVertice(nombre, ciudad, seguidores);
                     break;
+                case 2:
+                    System.out.println("Ingresa el nombre del vertice de origen");
+                    String nombreOrigen = leer.nextLine();
+                    Vertice origen = grafo.buscarVertice(nombreOrigen);
+                    if (origen == null) {
+                        System.out.println("Vertice de origen no encontrado");
+                        break;
+                    }
+                    
+                    System.out.println("Ingresa el nombre del vertice de destino");
+                    String nombreDestino = leer.nextLine();
+                    Vertice destino = grafo.buscarVertice(nombreDestino);
+                    if (destino == null) {
+                        System.out.println("Vertice de destino no encontrado");
+                        break;
+                    }
+                    
+                    System.out.println("Origen: " + origen.getNombre());
+                    System.out.println("Destino: " + destino.getNombre());
+                    grafo.insertarArista(origen, destino);
+                    break;
+                    
                 default:
                     System.out.println("Opcion no valida, elige otra");
                     break;
