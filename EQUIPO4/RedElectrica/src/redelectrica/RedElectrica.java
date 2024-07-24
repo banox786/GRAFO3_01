@@ -109,8 +109,6 @@ public class RedElectrica {
             }
         }
     }
-    
-    //comentario jflajslfj
  
     public static void main(String[] args) {
        Scanner leer = new Scanner(System.in);
@@ -124,8 +122,29 @@ public class RedElectrica {
         
         Generador origen, destino; //Origen y Destino de Cable
         
-        //Creacion del Red Electrica
+        //Creacion de la Red Electrica
         RedElectrica redsita = new RedElectrica();
+        
+        do{
+            //Opciones
+            System.out.println("\n Menu: \n 1. Insertar Generador \n 2. Insestar Cable \n 3. Mostrar \n 4. Salir");
+            //Leer la opcion
+            opc = leer.nextInt();
+            leer.nextLine();
+            
+            switch(opc){
+                //1. Insertar Generador
+                case 1:
+                    System.out.print("Inserta el ID: ");
+                    id = leer.nextInt();
+                    System.out.print("Inserta la capacidad: ");
+                    capacidad = leer.nextInt();
+                    System.out.print("Inserta el tipo: ");
+                    tipo = leer.next();
+                    System.out.print("Inserta la ubicacion: ");
+                    ubicacion = leer.next();
+                    redsita.insertarGenerador(id, capacidad, tipo, ubicacion);
+                break;
     }
     
 }
