@@ -1,0 +1,16 @@
+
+public class Grafo {
+    private Vertice inicio;
+
+    public Grafo(Vertice inicio) {
+        this.inicio = inicio;
+    }
+
+    public Vertice getInicio() {
+        return inicio;
+    }
+
+    public void setInicio(Vertice inicio) {
+        this.inicio = inicio;
+    }
+}
