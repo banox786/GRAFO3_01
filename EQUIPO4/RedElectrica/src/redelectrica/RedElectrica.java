@@ -33,7 +33,7 @@ public class RedElectrica {
  
     
     
-    //Incertar Generador
+    //Insertar Generador
     public void insertarGenerador(int id, int capacidad, String tipo, String ubicacion){
         //Crear nuevo Generador
         Generador nuevo = new Generador(id, capacidad, tipo, ubicacion);
@@ -94,18 +94,18 @@ public class RedElectrica {
             System.out.println("No se puede insertar cable.");
         } else {
             //Crea un nuevo cable que apunta al generador destino
-            Cable nuevaCable = new Cable(destino);
+            Cable nuevoCable = new Cable(destino);
             //Si el generador origen no tiene cables, añade el nuevo cable como el primera
             if(origen.getInicioCable() == null){
-                origen.setInicioCable(nuevaCable);
+                origen.setInicioCable(nuevoCable);
             } else {
                 //Si el generador origen ya tiene cables, recorre hasta el último cable
                 Cable actual = origen.getInicioCable();
                 while(actual.getSigCable() != null){
                     actual = actual.getSigCable();
                 }
-                //Añade el nueva cable al final de el lista de cables del generador origen
-                actual.setSigCable(nuevaCable);
+                //Añade el nuevo cable al final de el lista de cables del generador origen
+                actual.setSigCable(nuevoCable);
             }
         }
     }
@@ -123,11 +123,11 @@ public class RedElectrica {
         Generador origen, destino; //Origen y Destino de Cable
         
         //Creacion de la Red Electrica
-        RedElectrica redsita = new RedElectrica();
+        RedElectrica redsita = new RedElectrica();
         
         do{
             //Opciones
-            System.out.println("\n Menu: \n 1. Insertar Generador \n 2. Insestar Cable \n 3. Mostrar \n 4. Salir");
+            System.out.println("\n Menu: \n 1. Insertar Generador \n 2. Insertar Cable \n 3. Mostrar \n 4. Salir");
             //Leer la opcion
             opc = leer.nextInt();
             leer.nextLine();
