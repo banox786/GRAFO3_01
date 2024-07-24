@@ -1,25 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package graforedsocial;
+
 import java.util.Scanner;
-/**
- *
- * @author HOME
- */
+
 public class GrafoRedSocial {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
         Scanner leer = new Scanner(System.in);
         Grafo grafo = new Grafo();
-        int opc,seguidores;
-        String nombre,ciudad;
+        int opc, seguidores;
+        String nombre, ciudad;
         
         do {
             System.out.println("Menu\n");
@@ -38,6 +27,7 @@ public class GrafoRedSocial {
                     ciudad = leer.nextLine();
                     System.out.println("Ingresa la cantidad de seguidores del nuevo vertice");
                     seguidores = leer.nextInt();
+                    leer.nextLine(); // Limpiar el buffer
                     grafo.insertarVertice(nombre, ciudad, seguidores);
                     break;
 
