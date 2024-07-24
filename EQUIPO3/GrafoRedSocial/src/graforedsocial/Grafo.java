@@ -10,5 +10,13 @@ package graforedsocial;
  * @author HOME
  */
 public class Grafo {
-    
+    private Vertice inicio;
+
+    public Grafo(){
+        this.inicio = null;
+    }
+
+    public Vertice getInicio(){
+        return inicio;
+    }
 }
