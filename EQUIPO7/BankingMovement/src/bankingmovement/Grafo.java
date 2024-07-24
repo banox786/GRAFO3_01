@@ -6,7 +6,7 @@ public class Grafo {
    private List<Vertice> vertices;
    private List<Arista> aristas;
 
-public grafo(List<Vertice> vertices, List<Arista> Aristas){
+public Grafo(List<Vertice> vertices, List<Arista> Aristas){
    this.vertices = vertices;
    this. aristas = aristas;
    }
@@ -23,22 +23,24 @@ public grafo(List<Vertice> vertices, List<Arista> Aristas){
       this.aristas = aristas;
    }
 
-   public void insertarArista(Vertice origen, Vertice destino){
-      if (origen == null || destino == null){
-         System.out.println("No podemos insertar arista, intentalo de nuevo");
-      }else{
-      Arista nuevaArista = new Arista(destino);
-         if (origen.getInicioArista() == null){
-            origen.setInicioArista(nuevaArista);
-         }else{
-            Arista actual = origen.getInicioArista();
-            while (actual.getSigArista() != null);
-               actual = actual.getSigArista();
-         }
-         actual.setSigArista(nuevaArista);
-      }
-   }
+   public void insertarArista(float monto, String fecha, String tipoTransaccion, Vertice cuentaDestino, Vertice cuentaOrigen, Arista sigArista){
+       if(cuentaOrigen==null || cuentaDestino==null){
+           System.out.println("No se puede insertar la arista");
+       }else{
+           Arista nuevaArista=new Arista(monto,fecha,tipoTransaccion, cuentaDestino, cuentaOrigen);
+           if(cuentaOrigen.getInicioArista()==null){
+           cuentaOrigen.setInicioArista(nuevaArista);
+           
+       }else{
+               Arista actual=cuentaOrigen.getInicioArista();
+               while(actual.getSigArista()!=null){
+                   actual=actual.getSigArista();
+               }
+               actual.setSigArista(nuevaArista);
+               }
+       }
+       
+       
+      
 }
-
-   public void mostrarListaAdyacencia
-         
+}         
