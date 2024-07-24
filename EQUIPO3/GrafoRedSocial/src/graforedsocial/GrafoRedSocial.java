@@ -31,6 +31,7 @@ public class GrafoRedSocial {
             opc = leer.nextInt();
             switch (opc) {
                 case 1:
+                     System.out.println("Insertar Vertice");
                     System.out.println("Ingresa el nombre del nuevo vertice");
                     String nombre = leer.nextLine();
                     System.out.println("Ingresa la ciudad del nuevo vertice");
@@ -40,6 +41,7 @@ public class GrafoRedSocial {
                     grafo.insertarVertice(nombre, ciudad, seguidores);
                     break;
                 case 2:
+                    System.out.println("Insertar Arista");
                     System.out.println("Ingresa el nombre del vertice de origen");
                     String nombreOrigen = leer.nextLine();
                     Vertice origen = grafo.buscarVertice(nombreOrigen);
@@ -62,6 +64,7 @@ public class GrafoRedSocial {
                     break;
                     
                 case 3:
+                     System.out.println("Mostrar lista de Adyacencia");
                     grafo.mostrarListaAdyacencia();
                     break;
 
