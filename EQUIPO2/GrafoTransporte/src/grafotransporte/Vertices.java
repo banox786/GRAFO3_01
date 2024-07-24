@@ -9,5 +9,51 @@ package grafotransporte;
  * @author navy_
  */
 public class Vertices {
+    private String nombreEstacion;
+    private String horario;
+    private Vertices destino;
+    private Aristas inicioArista;
+
+    //Constructor
+    public Vertices(String nombreEstacion, String horario, Vertices destino, Aristas inicioArista) {
+        this.nombreEstacion = nombreEstacion;
+        this.horario = horario;
+        this.destino = destino;
+        this.inicioArista = inicioArista;
+    }
+    
+    //Setters y getters
+
+    public String getNombreEstacion() {
+        return nombreEstacion;
+    }
+
+    public void setNombreEstacion(String nombreEstacion) {
+        this.nombreEstacion = nombreEstacion;
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public Vertices getDestino() {
+        return destino;
+    }
+
+    public void setDestino(Vertices destino) {
+        this.destino = destino;
+    }
+
+    public Aristas getInicioArista() {
+        return inicioArista;
+    }
+
+    public void setInicioArista(Aristas inicioArista) {
+        this.inicioArista = inicioArista;
+    }
     
 }
