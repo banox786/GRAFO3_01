@@ -8,6 +8,7 @@ package grafotransporte;
  *
  * @author navy_
  */
+import java.util.Scanner;
 public class GrafoTransporte {
 
     private Vertices primerVertice;
@@ -60,10 +61,10 @@ public class GrafoTransporte {
     public void mostrarGrafo() {
         Vertices temp = primerVertice;
         while (temp != null) {
-            System.out.println("Estación: " + temp.getNombreEstacion() + ", Horario: " + temp.getHorario());
+            System.out.println("Estacion: " + temp.getNombreEstacion() + ", Horario: " + temp.getHorario());
             Aristas aristaTemp = temp.getInicioArista();
             while (aristaTemp != null) {
-                System.out.println("  -> Destino: " + aristaTemp.getVerticeDestino().getNombreEstacion() + ", Distancia: " + aristaTemp.getDistancia() + ", Tiempo: " + aristaTemp.getTiempo());
+                System.out.println("     Destino: " + aristaTemp.getVerticeDestino().getNombreEstacion() + ", Distancia: " + aristaTemp.getDistancia() + ", Tiempo: " + aristaTemp.getTiempo());
                 aristaTemp = aristaTemp.getSigAristas();
             }
             temp = temp.getSigVertices();
@@ -72,14 +73,56 @@ public class GrafoTransporte {
 
     public static void main(String[] args) {
         GrafoTransporte grafo = new GrafoTransporte();
-        grafo.agregarVertice("Estación A", "08:00 - 20:00");
-        grafo.agregarVertice("Estación B", "09:00 - 18:00");
-        grafo.agregarVertice("Estación C", "07:00 - 22:00");
+        Scanner scanner = new Scanner(System.in);
 
-        grafo.agregarArista("Estación A", "Estación B", 5, 10);
-        grafo.agregarArista("Estación A", "Estación C", 10, 20);
-        grafo.agregarArista("Estación B", "Estación C", 2, 5);
+        while (true) {
+            System.out.println("\nMenu de opciones:");
+            System.out.println("1. Insertar estacion (vertice)");
+            System.out.println("2. Insertar conexion (arista)");
+            System.out.println("3. Buscar estacion");
+            System.out.println("4. Mostrar lista de adyacencia");
+            System.out.println("5. Salir");
+            System.out.print("Selecciona una opcion: ");
+            String opcion = scanner.nextLine();
 
-        grafo.mostrarGrafo();
+            switch (opcion) {
+                case "1":
+                    System.out.print("Nombre de la estacion: ");
+                    String nombreEstacion = scanner.nextLine();
+                    System.out.print("Horario de la estacion: ");
+                    String horario = scanner.nextLine();
+                    grafo.agregarVertice(nombreEstacion, horario);
+                    break;
+                case "2":
+                    System.out.print("Nombre de la estacion de origen: ");
+                    String origen = scanner.nextLine();
+                    System.out.print("Nombre de la estacion de destino: ");
+                    String destino = scanner.nextLine();
+                    System.out.print("Distancia (km): ");
+                    int distancia = Integer.parseInt(scanner.nextLine());
+                    System.out.print("Tiempo (min): ");
+                    int tiempo = Integer.parseInt(scanner.nextLine());
+                    grafo.agregarArista(origen, destino, distancia, tiempo);
+                    break;
+                case "3":
+                    System.out.print("Nombre de la estacion a buscar: ");
+                    String nombreBusqueda = scanner.nextLine();
+                    Vertices vertice = grafo.buscarVertice(nombreBusqueda);
+                    if (vertice != null) {
+                        System.out.println("Estacion encontrada: " + vertice.getNombreEstacion() + ", Horario: " + vertice.getHorario());
+                    } else {
+                        System.out.println("Estacion no encontrada.");
+                    }
+                    break;
+                case "4":
+                    grafo.mostrarGrafo();
+                    break;
+                case "5":
+                    scanner.close();
+                    return;
+                default:
+                    System.out.println("Opcion no válida, por favor intenta de nuevo.");
+            }
+        }
     }
 }
