@@ -57,6 +57,17 @@ public class RedTelecom {
         }
     }
 
-    
+    public void mostrarListaAdyacencia() {
+        Dispositivo actual = primerDispositivo;
+        while (actual != null) {
+            System.out.println(actual.toString() + "\t");
+            Arista actualArista = actual.getPrimerArista();
+            while (actualArista != null) {
+                System.out.print(actualArista.getDispositivoDestino().getDirIP() + "--" + actualArista.getPonderacion() + "-->");
+                actualArista = actualArista.getSigArista();
+            }
+            System.out.println("");
+            actual = actual.getSigDispositivo();
+        }
     }
 }

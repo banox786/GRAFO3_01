@@ -11,13 +11,13 @@ public class Vertice {
     private Vertice sigDispositivo;
     private Arista primeraArista;
 
-    public Vertice(String dirIP, String nombre, String tipo, float capacidad, Vertice sigDispositivo, Arista primeraArista) {
+    public Vertice(String dirIP, String nombre, String tipo, float capacidad) {
         this.dirIP = dirIP;
         this.nombre = nombre;
         this.tipo = tipo;
         this.capacidad = capacidad;
-        this.sigDispositivo = sigDispositivo;
-        this.primeraArista = primeraArista;
+        this.sigDispositivo = null;
+        this.primeraArista = null;
     }
 
     public String getDirIP() {
@@ -66,6 +66,11 @@ public class Vertice {
 
     public void setPrimeraArista(Arista primeraArista) {
         this.primeraArista = primeraArista;
+    }
+
+    @Override
+    public String toString() {
+        return "Vertice{" + "dirIP=" + dirIP + ", nombre=" + nombre + ", tipo=" + tipo + ", capacidad=" + capacidad + ", sigDispositivo=" + sigDispositivo + ", primeraArista=" + primeraArista + '}';
     }
 
     
