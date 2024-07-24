@@ -15,11 +15,6 @@ public class RedElectrica {
         this.inicio = null;
     }
  
- 
- 
- 
- 
-
     public Generador getInicio() {
         return inicio;
     }
@@ -28,11 +23,7 @@ public class RedElectrica {
         this.inicio = inicio;
     }
     
- 
- 
- 
-    
-    
+
     //Incertar Generador
     public void insertarGenerador(int id, int capacidad, String tipo, String ubicacion){
         //Crear nuevo Generador
