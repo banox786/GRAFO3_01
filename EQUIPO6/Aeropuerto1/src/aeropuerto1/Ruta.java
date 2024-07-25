@@ -6,7 +6,7 @@ package aeropuerto1;
 
 /**
  *
- * @author kungl
+
  */
 public class Ruta {
     private Aeropuerto origen;
