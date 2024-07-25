@@ -5,7 +5,7 @@
 package aeropuerto1;
 
 /**   
- *   
+ *     
  * @author kungl
  */
 import java.util.ArrayList;
