@@ -16,7 +16,7 @@ public class GrafoTransporte {
     public GrafoTransporte() {
         this.primerVertice = null;
     }
-
+    //METODOS CREADOS J.A
     public void agregarVertice(String nombreEstacion, String horario) {
         Vertice nuevoVertice = new Vertice(nombreEstacion, horario, null);
         if (primerVertice == null) {
@@ -29,7 +29,7 @@ public class GrafoTransporte {
             temp.setSigVertices(nuevoVertice);
         }
     }
-
+//METODO CREADO J.A
     public void agregarArista(String origen, String destino, int distancia, int tiempo) {
         Vertice verticeOrigen = buscarVertice(origen);
         Vertice verticeDestino = buscarVertice(destino);
@@ -46,7 +46,7 @@ public class GrafoTransporte {
             }
         }
     }
-
+//METODO CREADO J.A
     private Vertice buscarVertice(String nombreEstacion) {
         Vertice temp = primerVertice;
         while (temp != null) {
@@ -57,7 +57,7 @@ public class GrafoTransporte {
         }
         return null;
     }
-
+//METODO CREADO J.A
     public void mostrarGrafo() {
         Vertice temp = primerVertice;
         while (temp != null) {
