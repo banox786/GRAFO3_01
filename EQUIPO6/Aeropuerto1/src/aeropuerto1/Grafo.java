@@ -9,7 +9,7 @@ package aeropuerto1;
  * @author kungl
  */
 import java.util.ArrayList;
-import java.util.List;
+import java.util.List;  
 
 public class Grafo {
     private List<Aeropuerto> aeropuertos;
