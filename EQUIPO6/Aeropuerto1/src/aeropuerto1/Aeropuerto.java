@@ -18,7 +18,7 @@ public class Aeropuerto {
         this.ciudad = ciudad;
         this.capacidad = capacidad;
     }
-
+   
     public String getNombre() {
         return nombre;
     }
