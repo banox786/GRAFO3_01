@@ -20,7 +20,7 @@ public class Aeropuerto {
     }
    
     public String getNombre() {
-        return nombre;
+        return nombre;   
     }
    
     public String getCiudad() {
