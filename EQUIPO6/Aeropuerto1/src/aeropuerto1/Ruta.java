@@ -5,7 +5,7 @@
 package aeropuerto1;
 
 /**
- *
+ *   
 
  */
 public class Ruta {
