@@ -11,7 +11,7 @@ package aeropuerto1;
 public class Aeropuerto {
     private String nombre;
     private String ciudad;
-    private int capacidad;   
+    private int capacidad;    
 
     public Aeropuerto(String nombre, String ciudad, int capacidad) {
         this.nombre = nombre;
