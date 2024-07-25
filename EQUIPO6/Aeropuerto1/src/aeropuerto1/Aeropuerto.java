@@ -30,7 +30,7 @@ public class Aeropuerto {
     public int getCapacidad() {
         return capacidad;
     }
-
+  
     @Override
     public String toString() {
         return nombre + " (" + ciudad + ")";
