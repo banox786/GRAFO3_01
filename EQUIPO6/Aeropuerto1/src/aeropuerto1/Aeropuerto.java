@@ -7,7 +7,7 @@ package aeropuerto1;
 /**
  *
  
- */
+ */   
 public class Aeropuerto {
     private String nombre;
     private String ciudad;
