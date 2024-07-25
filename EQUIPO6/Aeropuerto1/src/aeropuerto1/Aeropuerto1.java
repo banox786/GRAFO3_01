@@ -5,7 +5,7 @@
 package aeropuerto1;
 
 import java.util.Scanner;
-  
+    
 public class Aeropuerto1 {
     private static Grafo grafo = new Grafo();
     private static Scanner scanner = new Scanner(System.in);
